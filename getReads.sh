@@ -10,6 +10,6 @@
 while read file;
  # fetch data by accession with enterz and
  # save in fastq format in folder 'reads'
- do echo enaDataGet -f fasta -d reads $file;
+ do enaDataGet -f fasta -d reads $file;
 # get accesion numbers from file 'ids.txt'
 done<ids.txt
