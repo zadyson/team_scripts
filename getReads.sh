@@ -1,0 +1,15 @@
+# Downloads multiple read sets from ena using entrez
+# using a file with one data accession per line
+# Zoe Dyson zoe.dyson(at)lshtm.ac.uk
+# 24/02/2023
+# Example usage 'bash getReads.sh > getReadsLog.txt'
+#
+#!/bin/bash
+#
+# Loop through accessions in file
+while read file;
+ # fetch data by accession with enterz and
+ # save in fastq format in folder 'reads'
+ do echo enaDataGet -f fasta -d reads $file;
+# get accesion numbers from file 'ids.txt'
+done<ids.txt
