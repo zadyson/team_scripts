@@ -1,10 +1,10 @@
+#!/bin/bash
+#
 # Downloads multiple read sets from ena using entrez
 # using a file with one data accession per line
 # Zoe Dyson zoe.dyson(at)lshtm.ac.uk
 # 24/02/2023
 # Example usage 'bash getReads.sh > getReadsLog.txt'
-#
-#!/bin/bash
 #
 # Loop through accessions in file
 while read file;
