@@ -9,6 +9,6 @@
 # Loop through accessions in file
 while read file;
  # run paratype on each accession
- echo python3 ~/software/Paratype/paratype.py --id $file --mode fastq --fastq ../reads/${file}/${file}_1.fastq.gz ../reads/${file}/${file}_2.fastq.gz --output ${file}_paratype.txt
+ do python3 ~/software/Paratype/paratype.py --id $file --mode fastq --fastq ../reads/${file}/${file}_1.fastq.gz ../reads/${file}/${file}_2.fastq.gz --output ${file}_paratype.txt
 # get accesion numbers from file 'ids.txt'
-done<ids.txt
+done<../ids.txt
