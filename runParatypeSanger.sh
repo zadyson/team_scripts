@@ -14,7 +14,7 @@ module load bcftools/1.9--h68d8f2e_9
 module load samtools/1.9--h91753b0_8
 
 # Activate python3 env with bio
-source my_project/bin/activate
+source /data/pam/typhinet/scratch/zd2/2023_TyphiNET_ParatyphiA/tgc_data/paratyphi_a/projects/Silva_medrixiv_2023/paratype/my_project/bin/activate
 
 # Loop through accessions in file
 while read file;
