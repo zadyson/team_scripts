@@ -19,7 +19,6 @@ source /data/pam/typhinet/scratch/zd2/2023_TyphiNET_ParatyphiA/tgc_data/paratyph
 # Loop through accessions in file
 while read file;
  # run paratype on each accession
- #do bsub.py 16 $file python3 /data/pam/typhinet/scratch/zd2/2023_TyphiNET_ParatyphiA/software/Paratype/paratype.py --id $file --mode fastq --fastq ../reads/${file}/${file}_1.fastq.gz ../reads/${file}/${file}_2.fastq.gz --threads 8 --output ${file}_paratype.txt
- do bsub -E 'test -e /nfs/users/nfs_z/zd2' -R "select[mem>16000] rusage[mem=16000]" -M16000 -o ERR10293809.o -e ERR10293809.e -J ERR10293809 -n8 python3 /data/pam/typhinet/scratch/zd2/2023_TyphiNET_ParatyphiA/software/Paratype/paratype.py --id $file --mode fastq --fastq ../reads/${file}/${file}_1.fastq.gz ../reads/${file}/${file}_2.fastq.gz --threads 8 --output ${file}_paratype.txt
+ do bsub -E 'test -e /nfs/users/nfs_z/zd2' -R "select[mem>16000] rusage[mem=16000]" -M16000 -o ${file}.o -e ${file}.e -J $file -n8 python3 /data/pam/typhinet/scratch/zd2/2023_TyphiNET_ParatyphiA/software/Paratype/paratype.py --id $file --mode fastq --fastq ../reads/${file}/${file}_1.fastq.gz ../reads/${file}/${file}_2.fastq.gz --threads 8 --output ${file}_paratype.txt
 # get accesion numbers from file 'ids.txt'
 done<../ids.txt
