@@ -4,7 +4,6 @@
 renumber_cds_trna.py
 
 A command-line tool to renumber CDS, tRNA, and handle pseudogene features in a GenBank file.
-Note: treats pseudogenes related to tRNA as tRNA for numbering purposes.
 
 Usage:
     python renumber_cds_trna.py -i input.gbk -o output.gbk --prefix GENE_ --zeros 5
