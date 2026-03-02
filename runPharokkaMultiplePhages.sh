@@ -1,0 +1,1 @@
+for file in *.fasta*; do pharokka.py -i ${file} -o ${file%.*}_pharokka_annotation --dnaapler --terminase_strand pos --database /Users/lshzd1/miniconda3/envs/phage_annotation_v1/bin/../databases/.; done
